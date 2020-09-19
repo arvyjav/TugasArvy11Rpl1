@@ -3,7 +3,7 @@
     package="com.example.tugasarvy11rpl1">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission  android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Listdata"></activity>
+        <activity android:name=".DetailMovie"></activity>
+        <activity android:name=".Listdata" />
         <activity android:name=".ControllClass">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +23,7 @@
         </activity>
         <activity android:name=".RealActivity" />
         <activity android:name=".Registration" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

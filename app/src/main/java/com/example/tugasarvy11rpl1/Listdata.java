@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
@@ -97,7 +99,14 @@ public class Listdata extends AppCompatActivity {
                             adapter = new DataAdapter( DataArrayList, new DataAdapter.Callback() {
                                 @Override
                                 public void onClick(int position) {
-
+                                    Model movie = DataArrayList.get(position);
+                                    Intent intent = new Intent(getApplicationContext(), DetailMovie.class);
+                                    intent.putExtra("judul",movie.original_title);
+                                    intent.putExtra("date",movie.release_date);
+                                    intent.putExtra("deskripsi",movie.overview);
+                                    intent.putExtra("path",movie.poster_path);
+                                    startActivity(intent);
+                                    Toast.makeText(Listdata.this, ""+position, Toast.LENGTH_SHORT).show();
                                 }
 
                                 @Override
