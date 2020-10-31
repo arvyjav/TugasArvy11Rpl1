@@ -1,14 +1,20 @@
 package com.example.tugasarvy11rpl1;
 
 import android.util.Log;
+
 import java.util.List;
+
 import io.realm.Realm;
 import io.realm.RealmResults;
+
 public class RealmHelper {
+
     Realm realm;
+
     public  RealmHelper(Realm realm){
         this.realm = realm;
     }
+
     // untuk menyimpan data
     public void save(final ModelMovieRealm movieModel){
         realm.executeTransaction(new Realm.Transaction() {
@@ -31,6 +37,7 @@ public class RealmHelper {
             }
         });
     }
+
     // untuk memanggil semua data
     public List<ModelMovieRealm> getAllMovie(){
         RealmResults<ModelMovieRealm> results = realm.where(ModelMovieRealm.class).findAll();

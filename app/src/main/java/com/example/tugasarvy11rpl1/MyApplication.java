@@ -11,11 +11,11 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-        Realm.init( this );
+        Realm.init(this);
         RealmConfiguration configuration = new RealmConfiguration.Builder()
-                .name( "movie.db" )
-                .schemaVersion( 0 )
+                .name("movie.db")
+                .schemaVersion(0)
                 .build();
-        Realm.setDefaultConfiguration( configuration );
+        Realm.setDefaultConfiguration(configuration);
     }
 }

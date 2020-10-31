@@ -18,8 +18,6 @@ import io.realm.RealmConfiguration;
 
 public class DetailMovieFav extends AppCompatActivity{
     Realm realm;
-    RealmHelper realmHelper;
-    ModelMovieRealm movieModel;
 
     Bundle extras;
     String title;
